@@ -1,0 +1,819 @@
+Builds the source
+Java Compiler(Javac)
+0
+Format the Editor or IDE use
+Source Codes(.java)
+0
+Format of Java portable bytecode after compiling using JDK compiler
+.class
+0
+Java Runtime runs this
+compiled bytecode
+0
+Characters not allowed in an Identifier
+White space, and special characters such as (+,-,*,/,@,&, commas, etc)
+0
+Why should variables be self descriptive?
+They're not meaningless, and self-document the program
+0
+What does "strongly type" language mean?
+A variable is declared with a type, once the variable type is declared it can only store values of that type.
+0
+A variable must be declared before what?
+before it is used
+0
+Has a value that cannot be changed during execution
+variable declared with keyword "final"
+0
+What is an expression?
+combination of operators such as ( +, -, *, /) and operands (variables and literals)
+0
+What is assignment statements?
+variable = literalValue; or Variable = expression;
+0
+What are primative types?
+int, double, byte, short, long, float, double, char, boolean
+0
+What is a byte?
+8-bit signed integer, The range is [-2^7, 2^7-1] = [-128, 127]
+0
+What is a short?
+16-bit signed integer The range is [-2^15, 2^15-1] = [-32768, 32767]
+0
+What is an int?
+32-bit signed integer The range is [-2^31, 2^31-1] = [-2147483648, 2147483647] (˜9 digits)
+0
+What is a long?
+64-bit signed integer The range is [-2^63, 2^63-1] = [-9223372036854775808, +9223372036854775807] (˜19 digits)
+0
+What is a float?
+32-bit single precision floating-point number (˜6-7 significant decimal digits, in the range of ±[˜10^-45, ˜10^38])
+0
+What is a double?
+64-bit double precision floating-point number (˜14-15 significant decimal digits, in the range of ±[˜10^-324, ˜10^308])
+0
+What is a char?
+Represented in 16-bit Unicode '\u0000' to '\uFFFF'.
+0
+What is a boolean?
+Binary, Takes a value of either true or false.
+0
+What is a String?
+represents texts (a sequence of characters), not a primitive type
+0
+What is a literal?
+a specific constant value, such as -123, -456, "Hello", used in source, assigned directly to variable.
+0
+How to specify a value in binary? (to assigned to an int for example)
+use prefix '0b' or '0B' example int number1 = 0b01010000101000101101000010100010;
+0
+How to declare a char?
+char letter = 'a'; or char letter = 97; //for a
+0
+What are non-printable control characters?
+\n, \r, \t, \", \', \\, \uhhhh (example)
+0
+What is Newline or Line-feed escape sequence?
+\n
+0
+What is Carriage-return escape sequence?
+\r
+0
+What is Tab escape sequence?
+\t
+0
+How to make a unicode number escape sequence?
+\u000a (newline), \u000DH (carriage return) for example
+0
+What is a String literal?
+composed of zero or more characters surrounded by pair of double quotes, e.g. "Hello, world!";
+0
+This symbol %
+Remainder (Modulus) symbol
+0
+This symbol *
+Multiplication symbol
+0
+This symbol /
+Division symbol
+0
+This symbol +
+addition symbol, or unary positive
+0
+This symbol -
+Subtraction symbol, or unary negative
+0
+What is type-promotion for binary operations?
+when two types are together in an operand and one is promoted to the other
+0
+How to do exponents in Java?
+Math.exp(x, y), "x raises to the power of y"
+0
+What is overflow?
+when a resultant value wraps around if it exceeds its range
+0
+What is underflow?
+when integer division produces a truncated result such as 1/2 gives 0 instead of 0.5
+0
+What is secure coding?
+To check for arithmetic overflow.
+0
+How many kinds of type-casting in java?
+two types, explicit and implicit
+0
+What is Explicit type-casting?
+Using a type-casting operator in the prefix form of (new-type)operand such as d = (double)i;
+0
+What is Implicit type-casting?
+Casting performed by the compiler automatically. d = i;
+0
+What is assignment operation?
+= operation
+0
+What is compound addition and assignment operation?
++= operation
+0
+What is compound subtraction and assignment operation?
+-= operation
+0
+What is compound multiplication and assignment operation?
+*=
+0
+What is compound division and assignment operation?
+/=
+0
+What is compound remainder and assignment operation?
+%=
+0
+What is unary?
+consisting of or involving a single component or element
+0
+What would x++ do?
+this retrieves x, increment and stores the result back to x
+0
+what does y = ++x; do?
+this is Pre-Increment, Increment x, then use the new value
+0
+what does y = x++; do?
+this is Post-Increment, use the old value of x, then increment x;
+0
+what does y = --x; do?
+this is Pre-Decrement, decrement then use.
+0
+What does y = x--; do?
+this is Post-Decrement, use, then decrement.
+0
+What are Relational Operators?
+==, !=, >, >=, <, <=
+0
+Equal to operator.
+==
+0
+Not Equal to operator
+!=
+0
+What are Logical operators?
+!, ^, &&, ||
+0
+Logical NOT
+!
+0
+Logical XOR, exclusive or
+^
+0
+Logical AND
+&&
+0
+Logical OR
+||
+0
+What does the Logical XOR do?
+this outputs true if 1 and only 1 of the inputs is true
+0
+How to write a conditional Operator (? :)
+booleanExpression ? trueExpression : falseExpression
+0
+Parts of a for-loop
+for (initialization; test; post-processing){ body; }
+0
+Parts of a while-do loop
+while (test){ body; }
+0
+parts of a do-while loop
+do { body; } while (test);
+0
+What will an empty for loop do? for ( ; ; ) { body }
+this for-loop will run infinitly until broken
+0
+How to use a for-loop with comma separator
+for(int i = 0, int x = 100; i != x; i++, x--) multiple statements in initialization and post-post processing
+0
+How to exit the current innermost loop
+use break; to do this
+0
+What does continue do?
+this skips the rest of the loop body and goes on to next iteration
+0
+What is a labeled break?
+this breaks out of a specific loop specified with LabelName: loop and if(...) break labelName;
+0
+Why to avoid using labeled break and continue?
+These are un structured and hard to read ways of controlling the flow.
+0
+How to terminate the program?
+System.exit(1); //0 would mean normal termination, non-zero indicates abnormal termination
+0
+Another way to terminate the program besides System.exit
+use return; //in a main method
+0
+What is a dangling else?
+an else clause that is syntactically applicable to more than one if
+0
+What are the 3 classes of programming errors?
+Compilation error (or syntax error), Runtime error, Logical Error
+0
+What is a logical error?
+program completes but produces incorrect results
+0
+What is a runtime error?
+program halts pre-maturely without producing the results
+0
+How to print integer in a specific amount of spaces with printf()
+%2d // where 2 is number of spaces
+0
+How to print a string in specific number of spaces.
+%2s where 2 is the number of spaces
+0
+a new line in windows
+"/r/n"
+0
+how to printa decimal with specific amount of spaces
+("hi, %4.2f%", 5.556); // will print hi, 5.56
+0
+How to accept input from a dialog box?
+radius = JOptionPane.showInputDialog("Enter radius");
+0
+How to declare an array?
+int[] marks; // type and name
+0
+How to allocate for the array?
+marks = new int[5];
+0
+How to write a for-each loop?
+for(type item : anArray) { body; }
+0
+Declaring a Multi-Dimensional Array.
+int grid[][] = new int[5][7];
+0
+Three reasons to use Methods?
+Divide and conquer, Avoid repeating code, software reuse
+0
+Why divide and conquer?
+Modularize the program into self contained tasks, keep it simple
+0
+Why avoid repeating codes?
+makes it hard to maintain and synchronize copies of code
+0
+Why software reuse through using methods?
+lets you reuse easily by packaging them into library codes
+0
+Use of a method, name 3 parts.
+receives arguments passed by caller, performs operations defined in body, returns result to caller (arguments, caller, return)
+0
+Three ways to trace method invocation?
+Step over, step into, step out
+0
+What is "step over" for tracing method invocation?
+Treat the method call as one single step
+0
+What is "step into" for tracing method invocation?
+enter the method, tracing operations of the method
+0
+What is "step out" for tracing method invocation?
+complete the current method and return to the caller
+0
+define invoke, invocation
+"to activate" same as call
+0
+This is inside a method body. (unless void)
+return statement
+0
+Term for when an invoked method works on a cloned copy of a primitive type parameter.
+pass-by-value
+0
+What is Varargs?
+variable arguments.
+0
+What does variable arguments do?
+compiler packs these into an array passed into a method
+0
+How to use Varargs?
+public static void doSomething(String... strs) // strs is now an array type
+0
+What is method overloading?
+When there are more than one version of a method with different versions of parameters.
+0
+What are 5 commonly used Mathematical Methods?
+Math.pow(double x, double y), .sqrt(double x), .random(), .sin(), .cos()
+0
+What are 2 useful constants provided by the Math class?
+Math.PI and Math.E
+0
+What does Implicit type-casting for a Method's Parameters mean?
+a method that takes a double parameter can accept any numeric primitive type, such as int or float
+0
+What is kind of conversion is Implicit type casting always?
+This is always a widening conversion with prevents loss of precision.
+0
+What is Java's main(String[] args) method?
+This is for command-line arguments, arguments provided by the user when the java program is invoked.
+0
+These are 4 bitwise operators.
+~ (NOT), & (AND), ^ (XOR), | (OR)
+0
+Why would you use bitshifting?
+This is extremely easy and fast for computers to do, using it in your program can reduce memory usage and execution time.
+0
+What would a left shifting bit manipulation do?
+This would be equivalent to multiplying by powers of 2
+0
+What is non-circular shifting?
+This bit shifting shortcoming results in the end positions being cut off.
+0
+The steps to solve a problem are called this.
+An Algorithm.
+0
+This is a basic unit of OOP.
+A class is a unit of this.
+0
+This permits higher level of abstraction for solving real-life problems.
+OOP languages do this.
+0
+Traditional procedural languages like C and pascal do this which make them harder to use.
+These force you to think in terms of structure of the computer, such as memory bits, bytes, array, loop. Rather than the problem at hand.
+0
+These are some OOP languages.
+Java, C++ and C# are this type of language.
+0
+OOP lets you do this to solve problems easier.
+Lets you use software objects to represent and abstract entities of the problem space.
+0
+Three of the many benefits of OOP.
+Ease in software design, Ease in maintenance(easier to understand and debug), Resusable software(reuse fully tested and proven codes)
+0
+What class defines in Java.
+This is a definition of objects of the same kind. Defines attributes and behaviors common to all objects of the same kind.
+0
+3 compartments of a class
+Name(Identifier), Variables(Static attributes), Methods(dynamic behaviors)
+0
+UML stands for.
+Abbreviation for Unified Modeling Language
+0
+What is an instance?
+This is an instantiation of a particular item of a class.
+0
+To create an instance of a class you need to...
+Declare an instance identifier (name it), Construct (allocate storage using "new")
+0
+The dot (.) operator does this with a method or variable belonging to a class.
+Used to reference a member variable or method in a class.
+0
+Naming convention of a variable.
+this name shall be a noun or noun phrase, first word lowercase, rest camel-case
+0
+Naming convention of a method.
+this name shall be a verb denoting an action
+0
+Class naming convention.
+this name shall be a noun beginning with uppercase
+0
+What is a constructor?
+This is a special method that has the same method name as the class name.
+0
+What does a constructor do?
+This is used to construct and initialize all the member variables of a class.
+0
+This method has no return type and no return statement allowed in its body.
+A constructor cannot have this statement.
+0
+Four rules of a constructor.
+no return, only invoked via "new" and cannot be called again, are not inherited. Same name as class
+0
+What is a Public (class/variable/method)
+This is accessible and available to all the other objects in the system
+0
+What is a Private(class/variable/method)
+This is accessible and available within this class only.
+0
+What is encapsulation?
+This is information hiding, not making variables public without good reason.
+0
+This allows others to read the value of a private variable, without being able to modify it.
+A getter method does this.
+0
+This allows other classes to modify the value of a private variable.
+A setter method does this.
+0
+Why use a setter method?
+Use this method to provide data validation or transform raw data into an internal representation.
+0
+What does the keyword "this" do?
+it resolves ambiguity, allows to set an identifier with the same name as a parameter
+0
+Name of the parts passed in through a method.
+an argument is this.
+0
+boolean method naming
+name start with isVariable().
+0
+Something every well designed Java class should have.
+should have a toString() method.
+0
+What is a constant?
+a variable defined with the modifier final.
+0
+a final variable is this.
+a variable that cannot be re-assigned a new value
+0
+a final instance is this.
+instance that cannot be re-assigned a new object
+0
+a final class is this.
+a class that cannot be sub-classed(or extended)
+0
+a final method is this.
+a method that cannot be overridden.
+0
+what would a try-catch handling do?
+graceful handling of an exception, continue its operation without abrubt termination
+0
+Name for reusing a class when there is a "has-a" relationship.
+Composition exibits this type of relationship.
+0
+Why are classes in OOP often organized in heirarchy?
+This is done to avoid duplication and reduce redundancy of classes.
+0
+This is when a subclass gets all of the variables and methods from its superclasses.
+Inheritance does this.
+0
+What does method overriding do?
+when a class doesn't use an inherited method and provides its own version
+0
+How is variable hiding done?
+when a class defines a variable of the same name.
+0
+What does the keyword "super" refer to?
+this keyword refers to the superclass which could be immediate parent or its ancestor
+0
+What does the keyword "super" do?
+this keyword allows the subclass to acces above's methods and variables
+0
+If no constructor is defined in a class java compiler does this.
+automatically creates a no-argument(no-arg) constructor that simply issues a super() call in this case.
+0
+only this type of inheritance is allowed in java
+Single Inheritance is only allowed in this language
+0
+Define Polymorphism
+From Greek origin meaning "many forms"
+0
+What is Substitutability?
+When a subclass object can do whatever its superclass can do, meaning we can substitute a subclass when superclass is expected.
+0
+Main requirement of polymorphism.
+all the subclasses possess the properties of its superclass
+0
+How to derive a subclass from a superclass in polymorphism.
+Use "extends" in the subclass on the superclass.
+0
+Baboo is loved by.
+Dziubeck!
+0
+What is upcasting?
+substituting a subclass instance for its superclass, 
+0
+What is downcasting?
+revert a substituted instance back to a subclass reference.
+0
+What does the binary operator "instanceof" do?
+returns true if an object is an instance of a particular class.
+0
+In substitutability a reference to the class can hold either of these two things.
+an instance of the class or one of its subclasses can be held, known as this.
+0
+When a subclass instance is assigned to a superclass reference only these methods can be invoked.
+only the superclass methods can be invoked in this case unless overridden.
+0
+What is an abstract method?
+A method with only signature, method name, list of arguments and return type without body.
+0
+Define an abstract class.
+A class containting one or more abstract methods. Must be declared with a class-modifier abstract
+0
+UML notation of abstract class and method
+shown in italic in UML
+0
+Polymorphism makes it easy to extend software because..
+more subclasses can easily be derived to do this.
+0
+What is a java interface?
+this is a 100% abstract superclass which define a set of methods its subclasses must support
+0
+an interface contains only these.
+public abstract methods and possibly constants(public static final variables)
+0
+The keyword used to derive a subclass of an interface.
+"implements" is used in this case.
+0
+What does interface provide?
+this provides a form, protocol, standard, a set of rules for all objects that implement it.
+0
+This is the naming convention for an Interface in java.
+Use an adjective (typically ending with "able") such as Serializable, Movable, Runnable, etc. to name this type.
+0
+UML Notation of interface to subclasses
+this is marked with a dash-arrow from subclasses
+0
+How to inherit multiple interfaces in Java?
+using implements InterfaceName, InterfaceName
+0
+When to use abstract superclass over Interface
+use this when there is a clear class hierarchy over Interface
+0
+This is the type of binding that object-oriented languages use to support polymorphism.
+dynamic binding (or late-binding or run-time binding) is used by this type of language
+0
+This is the type of binding used by a procedural Language like C
+static binding (or early binding) used by this type of language, to resolve a call to an absolute address of the code
+0
+Late-Binding does this.
+When a message is sent to an object to invoke a method, the object figures out which piece to execute at run-time
+0
+Late-Binding / dynamic binding supports polymorphism but poses this problem.
+The compiler is unable to check whether the type casting operator is safe and can only check at runtime.
+0
+Why in OO Design should classes be tightly encapsulated, loosely coupled and highly cohesive?
+this is done so that classes are easy to maintain and suitable for re-use.
+0
+Why is tight encapsulation desired?
+This gives complete control on how data is to be read and changed.
+0
+Why is information hiding good?
+users are not aware, and don't need to be aware of how data is stored internally.
+0
+What does "coupling" refer to?
+this refers to the degree to which one class relies on knowledge of the internals of another class.
+0
+Why is "tight-coupling" undesirable?
+this is undesirable because if one class changes its internal representations, all the other classes need to be rewritten
+0
+What is Cohesion?
+this refers to the degree to which a class or method resists being broken down into smaller pieces.
+0
+High cohesion is associated with?
+associated with loose coupling because this class has fewer interactions with other classes.
+0
+What can you use to test whether to design the classes using inheritence or composition?
+use "is-a" and "has-" to test this.
+0
+Program to the Interface, not to this.
+Program to this "" not the implementation.
+0
+What is a static variable / method?
+a variable / method that belongs to the class and is shared by all instances, also called class variable / method
+0
+what is a non-static variable / method?
+a variable / method that belongs to a specific instance of a class, also called instance variable / method
+0
+A static variable / method has this type of memory location.
+this has a common memory location, kept and shared by all the instances.
+0
+What are some uses for a static variable / method?
+some uses of this are counting number of instances, resource locking among instances, etc.
+0
+UML notation of static variable / methods
+these are underlined in a class diagram
+0
+A class that is composed purely of public static variables and methods
+java.lang.Math is composed entirely of these
+0
+The keyword "static" which was inherited from C/C++, denotes this.
+Denotes that a certain variable retains its value instead of re-initializes.
+0
+What is a static initializer?
+This is a block of codes labeled as static that is executed exactly once when the class is loaded.
+0
+What does every JVM have that loads the bytecode of a class file into memory?
+A class loader does this, java.lang.Classloader.
+0
+What does the JVM's class loader instantiate to maintain a loaded class?
+a java.lang.Class is instantiated to do this.
+0
+What is the instantiation process? (JVM sequence of 7 events)
+allocate mem., init variables, invoke constructor, call super const., initializers, constructor body, returns reference
+0
+opposite of a final which cannot be extended
+abstract is opposite of this and mush be extended
+0
+packages represented this way in UML notation
+these are represented as tabbed folders here.
+0
+Five things packages are used for.
+Organizing classes and related, Managing namespaces, Resolving naming conflicts, Access control, Distributing Java classes (as JAR)
+0
+JAR stands for this
+abbreviation of Java Archive
+0
+This is the package naming convention.
+this name is made up of the reverse of the domain name plus your own project name separated by dots 123name.example.com (com.example._123name)
+0
+The two ways to reference a class in your source code.
+fully-qualified name AND import fully-qualified-name
+0
+What does the java compiler do with imports when compiling to bytecode?
+this removes all imports and replaces classnames with fully-qualified names
+0
+When might you use import static?
+use this to define a set of constants when an interface is not really appropriate
+0
+How to compile classes in a package (outside of IDE)
+> javac -d e:\myproject PackageName.java
+0
+Why is a "dafault unnamed package" no good for "real" programs?
+These cannot be "imported" into another application and so are not recommended.
+0
+What algorithm does a JAR (Java Archive) file use for compression?
+This uses the famous "zip" algorithm.
+0
+The locations of source files and class files.
+What is "src" and "bin"?
+0
+What is a protected access control modifier?
+this means available to all classes in the same package and the subclasses derived from it.
+0
+What is a default access control modifier?
+this means available to classes in the same package only.
+0
+Default accessibility is also known as..
+known as package or friendly accessibility.
+0
+What part of Java runs a program?
+The JRE does this (Java Runtime Environment)
+0
+How to write the first "main" line of a java program.
+public static void main(String[] args){
+0
+How many primitive types are in Java?
+8 of these types are in java.
+0
+What are the 4 reference types in Java?
+class, interface, enum and array are of this type
+0
+Where is a reference variable holding its reference?
+This is held in the heap.
+0
+What value is automatically assigned to a reference variable after it is declared?
+null is assigned when this is declared.
+0
+Java's three types of variables of different lifetimes:
+Local variable, Instance variable, Class variable
+0
+What has happened if a variable is destroyed and no longer in memory?
+This means it has been garbage collected.
+0
+What is the default value for numeric primitive types upon declaration?
+"zero" is default for these
+0
+default value for a boolean upon declaration?
+false is the default value
+0
+Of what type are arrays and objects?
+these are reference type.
+0
+Where do primitive types such as int and double hold their values?
+These hold values in the program stack.
+0
+What does not destroying a heap's objects that are no longer in use lead to in non garbage collected languages?
+A "memory leak" is created this way.
+0
+What does memory leak mean?
+when dead objects pile-up and consume all the available storage.
+0
+Where does the garbage collector run?
+this runs in a low priority thread to release memory.
+0
+What are some pitfalls of Java?
+Garbage collector consumes resources and may result in inconsistent rate of execution.
+0
+What is a formal parameter?
+This is a placeholder in a method definition which is replaced when the method is invoked.
+0
+What is "pass-by-value" ?
+this is a term for passing a cloned value into a method where it does not have acces to the original copy.
+0
+What is it called when a method affects values outside the method itself?
+This is called "side-effect" and should be avoided if feasible.
+0
+How might you let a method modify the caller's copy of a primitive type?
+pass the primitive parameter as a one-element array to accomplish this.
+0
+What must an overriding method have?
+Must have same argument list. Same return type. Not a more restrictive access.
+0
+What must an overloading method have?
+This must have a different arguement list.
+0
+What does java.lang contain?
+contains classes that are core to the language itself (eg String, Math, Object)
+0
+What does java.util contain?
+contains utilities such as Scanner, Random, Date, ArrayList...
+0
+What is a wrapper class?
+These hold primitive values into objects and contain a private member variable that holds this value.
+0
+When might you want to use a wrapper class over the primitive type?
+Use if you need the primitive to be an object, such as Collections or if you don't want to initialize to 0 (uses null)
+0
+What class can be used to format numbers and currencies for different locales (into string)?
+Use the tools of NumberFormat for this.
+0
+What can be used to parse an input string to a number from a specific locale?
+public Number parse(String source) throws ParseException
+0
+A useful class to format dates.
+use java.text.DateFormat for this.
+0
+What can be used to extract comments to a Javadoc?
+JDK utility javadoc can be used to do this.
+0
+Why might you want to keep program documentation inside the source file?
+This helps keep documentation in sync with the project and write them as you write the program
+0
+What does immutable mean when they say String is immutable?
+this means content cannot be modified once it is created.
+0
+Why are primitives stored in the call stack?
+These require less storage spaces and are cheaper to manipulate here.
+0
+Define Operand
+"the quantity on which an operation is to be done." the numbers in the math.
+0
+How does String's storage in the stack potentially reduce the storage needed?
+Stored here these can share a location if they have the same contents.
+0
+Why would String str1 = new String("Hello"); be a poor way to create a string object?
+That would bypass the optimization provided by the common pool of the stack by storing it in the heap.
+0
+Beause of the immutable nature of a String object what is a better way to do frequent modifications?
+Using StringBuffer or StringBuilder classes to do this.
+0
+Why do strings need to be immutable? (unchangable)
+These share storage with other identical ones so changing one would effect them all.
+0
+How would you add an anonymous identifier to a UI component (can't reference it later)?
+add(new Label("Label Name", alignment)); //create it without declaring
+0
+What is the action called that is triggered through a button click or pressing "Enter" key on a TextField
+actions like these trigger and ActionEvent
+0
+How would you convert a primitive to a String?
+To do this you would concatenate the primitive with an empty String.
+0
+What is the difference between "Event-Driven" and "Procedural"?
+Procedural is executed in a sequential manner while this other waits for an event to trigger a response.
+0
+When would a "WindowEvent" be fired?
+This is triggered when a window has been opened/closed, activated/deactivated, iconified/deiconified.
+0
+When would a "MouseEvent" be triggered to its Listeners?
+This is triggered when a user would press, release, or click a mouse button.
+0
+When would a "KeyEvent" be fired to its listeners?
+When you pressed, released, typed a key.
+0
+What must KeyEvent implement?
+this must implement KeyListener.
+0
+What must MouseEvent implement?
+this must implement MouseListener or MouseMotionListener(for motion)
+0
+What is a nested class?
+This is a class defined inside another class.
+0
+What property makes an inner class (nested class) useful?
+this can access private members of the enclosing outer class, and make a program easier to understand.
+0
+What kind of class can only be accessible by the enclosing outer class?
+A private nested class can only be accessible by this.
+0
+What are some usages of a nested class?
+This can help control visibilities(of variables and methods), make a program clearer, and aid namespace management.
+0
+What is a case where using a named inner class would be ideal.
+this class is ideal in an event-driven environment where the methods often require access to the private variables of the outer class
+0
+What would an inner class without a name be called?
+this would be called an anonymous inner class.
+0
