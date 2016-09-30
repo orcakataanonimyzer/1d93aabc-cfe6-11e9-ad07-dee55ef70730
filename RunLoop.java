@@ -8,28 +8,28 @@ import javax.swing.JLabel;
 import javax.swing.JTextArea;
 
 public class RunLoop {
-	String path;
-	Random random;
-	Loader fileLoader;
-	int draw;
-	int count;
-	int cumulativeScore;
-	ArrayList<FlashCard> flashCards;
-	boolean buttonPressed;
-	boolean pathSet;
-	Saver saver;
-	JTextArea answerText;
-	JTextArea questionText;
-	JLabel scoreLabel;
-	JLabel filePath;
-	JButton yesBtn;
-	JButton noBtn;
-	JButton nextButton;
-	boolean showAnswerBtn;
-	boolean fileSet;
+	//private String path;
+	private Random random;
+	private Loader fileLoader;
+	private int draw;
+	private int count;
+	private int cumulativeScore;
+	private ArrayList<FlashCard> flashCards;
+	private boolean buttonPressed;
+	//private boolean pathSet;
+	private Saver saver;
+	private JTextArea answerText;
+	private JTextArea questionText;
+	private JLabel scoreLabel;
+	private JLabel filePath;
+	private JButton yesBtn;
+	private JButton noBtn;
+	private JButton nextButton;
+	private boolean showAnswerBtn;
+	private boolean fileSet;
 	
 	public RunLoop(String path, JLabel scoreLabel, JLabel filePath, JButton yesBtn, JButton noBtn, JButton nextButton){
-		this.path = path; //pointless for now but if I want to make this program save settings use this.
+		//this.path = path; //pointless for now but if I want to make this program save settings use this.
 		fileLoader = new Loader(path);
 		System.out.println("scoreLabel set");
 		this.scoreLabel = scoreLabel;
@@ -44,10 +44,14 @@ public class RunLoop {
 		filePath.setText(path);
 	}
 	
+	public void setFileBool(boolean set){
+		fileSet = set;
+	}
+	
 	
 	public void initialLoad(String path){
 		if(path.length() > 0){
-			this.path = path;
+			//this.path = path;
 			fileLoader.setPath(path);
 			loadFlashCards();
 			setCumulativeScore();
@@ -80,12 +84,10 @@ public class RunLoop {
 		}else{ //button is now a show answer button
 			//make programLoop show the answer, switch back to a "next" button
 			setBtnToNext();
-			//nextButton.setEnabled(false);
 		}
 	}
 	
 	private void setBtnToNext(){
-		System.out.println("show answer");
 		printQandA();
 		showAnswerBtn = false;
 		nextButton.setText("Next");
@@ -97,7 +99,6 @@ public class RunLoop {
 		for(FlashCard card: flashCards){
 			cumulativeScore += card.getCount();
 		}
-		System.out.println("score is: "+cumulativeScore);
 	}
 	
 	public void attachTextAreas(JTextArea aText, JTextArea qText){
@@ -106,7 +107,6 @@ public class RunLoop {
 	}
 	
 	public void runNext(){
-		System.out.println("run called");
 		if(flashCards != null && flashCards.size() > 0){
 			setScoreLabel();
 			buttonPressed = false;
@@ -143,16 +143,14 @@ public class RunLoop {
 	}
 	
 	private void saveFile(){
-		if(count > 4){
-			saver.saveFile(flashCards); //add a tally to this to not save so often
+		if(count > 3){ //tally for less frequent saves
+			saver.saveFile(flashCards);
 			count = 0;
 		}
 		count += 1;
 	}
 	
 	public void setButtonPressed(boolean yesOrNo){
-		System.out.println("button pressed");
-		
 		if(!fileSet){
 			notifyForFile();
 			return;

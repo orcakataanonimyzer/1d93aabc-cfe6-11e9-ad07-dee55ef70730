@@ -15,7 +15,6 @@ public class NoButtonListener implements ActionListener{
 	}
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		// TODO Auto-generated method stub
 		//yes button was pressed
 		//show answer / question
 		//mark a point for the question asked

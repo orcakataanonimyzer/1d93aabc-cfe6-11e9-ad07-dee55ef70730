@@ -5,19 +5,13 @@ import java.awt.event.ActionListener;
 import javax.swing.JFileChooser;
 
 public class SetFileListener implements ActionListener {
-	//Menu setFile;
-	//String filePath;
 	final JFileChooser fileChooser;
 	RunLoop programLoop;
-	//Loader fileLoader;
 	
 	public SetFileListener(RunLoop programLoop){
-		//this.setFile = setFile;
 		System.out.println("setFileListener attached");
 		fileChooser = new JFileChooser();
 		this.programLoop = programLoop;
-		//this.fileLoader = fileLoader;
-		
 	}
 	
 
@@ -32,7 +26,7 @@ public class SetFileListener implements ActionListener {
             System.out.println("Chooser: " + fileChooser.getSelectedFile().toString());
             //fileLoader.setPath(fileChooser.getSelectedFile().toString());
             programLoop.initialLoad(fileChooser.getSelectedFile().toString());
-            programLoop.fileSet = true;
+            programLoop.setFileBool(true);
         } else {
             //System.out.println("no selection");
         }

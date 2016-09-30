@@ -14,15 +14,15 @@ import javax.swing.JTextArea;
 
 public class FormMaker implements Runnable {
 	private JFrame frame;
-	String path;
-	JLabel scoreLabel;
-	JLabel filePath;
-	RunLoop programLoop;
-	int yNudge = 0;
-	int plusWidth = 120;
-	JButton yesButton;
-	JButton noButton;
-	JButton nextButton;
+	private String path;
+	private JLabel scoreLabel;
+	private JLabel filePath;
+	private RunLoop programLoop;
+	private int yNudge = 0;
+	private int plusWidth = 120;
+	private JButton yesButton;
+	private JButton noButton;
+	private JButton nextButton;
 	
 	@Override
 	public void run() {
@@ -54,7 +54,6 @@ public class FormMaker implements Runnable {
 	}
 	
 	private void createComponents(Container container){
-		//GridLayout layout = new GridLayout(3,1);
 		container.setLayout(null);
 		
 		MenuBar menuBar = new MenuBar();
@@ -69,11 +68,10 @@ public class FormMaker implements Runnable {
 		
 		
 		JTextArea jTextQuestion = new JTextArea();
-		//jTextQuestion.setPreferredSize(new Dimension(300,300));
+
 		JLabel questionLabel = new JLabel("Question");
 		questionLabel.setBounds(10,-40+yNudge,100,100);
 		
-		//scoreLabel = new JLabel("0");
 		scoreLabel.setBounds(415, -40+yNudge, 100,100);
 		
 		JLabel scoreTag = new JLabel("Rating:");
@@ -95,7 +93,6 @@ public class FormMaker implements Runnable {
 		jTextAnswer.setWrapStyleWord(true);
 		jTextAnswer.setEditable(false);
 		jTextAnswer.setFont(new Font("Ariel", Font.PLAIN, 18));
-		//jTextAnswer.setText("answer test text");
 		
 		programLoop.attachTextAreas(jTextAnswer, jTextQuestion);
 		
@@ -106,10 +103,8 @@ public class FormMaker implements Runnable {
 	
 		yesButton.addActionListener(new YesButtonListener(programLoop, yesButton, noButton));
 		noButton.addActionListener(new NoButtonListener(programLoop, yesButton, noButton));
-		nextButton.addActionListener(new NextButtonListener(programLoop, yesButton, noButton, nextButton));
+		nextButton.addActionListener(new NextButtonListener(programLoop));
 
-		
-		
 		
 		buttonPanel.add(noButton);
 		buttonPanel.add(nextButton);
